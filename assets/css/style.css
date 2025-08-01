@@ -15,11 +15,11 @@
      }
  }
 
- /* @media (min-width: 360px) {
+ @media (min-width: 320px) {
             .main-div {
                 width: auto;
             }
-        } */
+        }
 
 
  /* Base font-size (mobile-first) */
