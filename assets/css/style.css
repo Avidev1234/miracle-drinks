@@ -11,13 +11,14 @@
  @media (min-width: 1880px) {
      .main-div {
          width: 100.5%;
-         overflow: hidden;
+         
      }
  }
 
  @media (min-width: 320px) {
             .main-div {
                 width: 103.6%;
+                overflow: hidden;
             }
         }
 
