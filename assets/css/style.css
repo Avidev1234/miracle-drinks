@@ -1,5 +1,5 @@
  .main-div {
-     width: auto;
+     width: 103.6%;
      align-items: center;
      margin: auto;
  }
@@ -10,7 +10,7 @@
 
  @media (min-width: 1880px) {
      .main-div {
-         width: 100%;
+         width: 100.5%;
          /* overflow: hidden; */
      }
  }
