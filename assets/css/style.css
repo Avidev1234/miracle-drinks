@@ -10,17 +10,17 @@
 
  @media (min-width: 1880px) {
      .main-div {
-         width: 100%;
+         width: 100.58%;
          /* overflow: hidden; */
      }
  }
 
  @media (min-width: 320px) {
-            .main-div {
-                width: 100.6%;
-                overflow: hidden;
-            }
-        }
+     .main-div {
+         width: 103%;
+
+     }
+ }
 
 
  /* Base font-size (mobile-first) */
