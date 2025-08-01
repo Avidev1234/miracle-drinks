@@ -11,7 +11,7 @@
  @media (min-width: 1880px) {
      .main-div {
          width: 100.5%;
-         /* overflow: hidden; */
+         overflow: hidden;
      }
  }
 
