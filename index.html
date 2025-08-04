@@ -13,15 +13,33 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <div class="main-div row bg-success text-white p-2">
+    <div class="main-div row bg-success text-white p-2 position-fixed top-0 start-0  z-3">
         <div class="col d-flex gap-2 justify-content-start">
-            <div class="left-side d-flex gap-4">
+            <div class="left-side d-flex gap-1 gap-lg-2">
                 <span role="button">Customer Care</span>
                 <span role="button">Track Order</span>
             </div>
@@ -33,7 +51,7 @@
             </div>
         </div>
         <div class="col d-flex justify-content-end">
-            <div class="right-side d-flex gap-4">
+            <div class="right-side d-flex gap-2 gap-lg-4">
                 <span role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-twitter-x" viewBox="0 0 16 16">
                         <path
@@ -59,10 +77,7 @@
         </div>
     </div>
 
-    <? php// include('./includes/header.php') ?>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="
-    overflow: hidden;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mt-5 p-4">
         <div class="container-fluid">
             <span role="button"><img src="assets/images/logo.png" alt="ch" style="width: 90px;"></span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -376,6 +391,27 @@
     </main>
 
     <div class="col-10 col-md-10 mx-auto">
+
+        <div class="btn-group btn-group-lg mb-4 gap-4" role="group" aria-label="Large button group">
+            <button type="button" class="btn btn-outline-primary rounded-pill" onclick="showCards('set1')">Set
+                1</button>
+            <button type="button" class="btn btn-outline-primary rounded-pill" onclick="showCards('set2')">Set
+                2</button>
+            <button type="button" class="btn btn-outline-primary rounded-pill" onclick="showCards('set3')">Set
+                3</button>
+            <button type="button" class="btn btn-outline-primary rounded-pill" onclick="showCards('set4')">Set
+                4</button>
+            <button type="button" class="btn btn-outline-primary rounded-pill" onclick="showCards('set5')">Set
+                5</button>
+        </div>
+
+        <!-- Cards Container -->
+        <div id="cardContainer" class="row row-md-12 mt-3 py-4 gap-3 justify-content-start">
+            <!-- Cards will load here dynamically -->
+        </div>
+    </div>
+
+    <div class="col-10 col-md-10 mx-auto">
         <h3><strong>Our Expert</strong></h3>
 
         <div class="col col-md-12  image-fluid">
@@ -495,7 +531,7 @@
     <div class="col-10 mx-auto">
         <div class="row row-md-4 gap-2">
             <div class="col-12 col-md-12 col-xl-6">
-                <img src="assets/images/aurveda.jpg" alt="" class="img-fluid">
+                <img src="assets/images/aurveda.jpg" alt="" class="w-100">
             </div>
             <div class="col-12 col-md-12 col-xl-5">
                 <div class="col-12 col-md-12 ">
@@ -571,11 +607,11 @@
 
 
     <div class="col-10 col-md-10 mx-auto py-4">
-        <div class="row row-md-12 mt-10 py-4 gap-4">
-            <h3><strong>Testimonials</strong></h3>
+        <div class="row row-md-12 mt-10 py-4 gap-1">
+            <h3><strong>Knowledge</strong></h3>
             <!-- First div -->
-            <div class="col-6 col-md-4" style="width: 18rem;">
-                <div class="card" style="width: 18rem;">
+            <div class="col-6 col-md-4" style="width: 19rem;">
+                <div class="card" style="width: 19rem;">
                     <img class="card-img-top" src="assets/images/aurveda.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -586,8 +622,8 @@
                 </div>
             </div>
             <!-- Second div -->
-            <div class="col-6 col-md-4" style="width: 18rem;">
-                <div class="card" style="width: 18rem;">
+            <div class="col-6 col-md-4" style="width: 19rem;">
+                <div class="card" style="width: 19rem;">
                     <img class="card-img-top" src="assets/images/aurveda.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -598,8 +634,8 @@
                 </div>
             </div>
             <!-- third div -->
-            <div class="col-6 col-md-4" style="width: 18rem;">
-                <div class="card" style="width: 18rem;">
+            <div class="col-6 col-md-4" style="width: 19rem;">
+                <div class="card" style="width: 19rem;">
                     <img class="card-img-top" src="assets/images/aurveda.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -609,8 +645,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-4" style="width: 18rem;">
-                <div class="card" style="width: 18rem;">
+            <div class="col-6 col-md-4" style="width: 19rem;">
+                <div class="card" style="width: 19rem;">
                     <img class="card-img-top" src="assets/images/aurveda.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -620,8 +656,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-4" style="width: 18rem;">
-                <div class="card" style="width: 18rem;">
+            <div class="col-6 col-md-4" style="width: 19rem;">
+                <div class="card" style="width: 19rem;">
                     <img class="card-img-top" src="assets/images/aurveda.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -631,10 +667,297 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
 
+
+    <div class="col-10 col-md-10 mx-auto py-4">
+        <section class="teams" style="width:100%;">
+            <div class="">
+                <h3><strong>Our Blogs</strong></h3>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="customers-teams" class="owl-carousel">
+
+                            <!--team 1 -->
+                            <div class="item">
+                                <div class="shadow-effect">
+                                    <img class="img-circle"
+                                        src="http://homedroidtech.com/assets/images/team/ankurgupta.jpeg"
+                                        alt="ankurgupta">
+                                    <h2>Ankur Gupta</h2>
+                                    <p class="title">Director, Founder & CEO</p>
+                                    <div id="pastexp">
+                                        <h5 id="pastexphead">RESEARCH SCHOLAR</h5>
+                                        <p>Dept. of CSE</p>
+                                        <p style="margin-top:-5px;">Indian Institute of Technology (IIT) Roorkee</p>
+                                    </div>
+                                    <div class="social-icons" id="teamsocial">
+                                        <a class="social-icon social-icon--facebook" id="socialicon">
+                                            <img src="https://i.imgur.com/c9JxYPS.png">
+                                        </a>
+
+                                        <a class="social-icon social-icon--twitter" id="socialicon">
+                                            <img src="https://i.imgur.com/VHB4APa.png">
+                                        </a>
+                                        <a class="social-icon social-icon--linkedin" id="socialicon">
+                                            <img src="https://i.imgur.com/egfJ4V2.png">
+                                        </a>
+
+                                        <a class="social-icon social-icon--instagram" id="socialicon">
+                                            <img src="https://i.imgur.com/cgH07pQ.png">
+                                        </a>
+
+
+                                    </div> <!--Social Icons End Here-->
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+                            <!--END OF team 1 -->
+
+
+
+                            <!--team 2 -->
+                            <div class="item">
+                                <div class="shadow-effect">
+                                    <img class="img-circle"
+                                        src="http://homedroidtech.com/assets/images/team/sushilgupta.jpeg"
+                                        alt="ankurgupta">
+                                    <h2>Sushil Gupta</h2>
+                                    <p class="title">Co-Founder & Managing Director</p>
+                                    <div id="pastexp">
+                                        <h5 id="pastexphead">EMBEDDED EXPERT</h5>
+                                        <p>20+ Years of Experience</p>
+                                        <p style="margin-top:-5px;">Businessman</p>
+                                    </div>
+                                    <div class="social-icons" id="teamsocial">
+                                        <a class="social-icon social-icon--facebook" id="socialicon">
+                                            <img src="https://i.imgur.com/c9JxYPS.png">
+                                        </a>
+
+                                        <a class="social-icon social-icon--twitter" id="socialicon">
+                                            <img src="https://i.imgur.com/VHB4APa.png">
+                                        </a>
+                                        <a class="social-icon social-icon--linkedin" id="socialicon">
+                                            <img src="https://i.imgur.com/egfJ4V2.png">
+                                        </a>
+
+                                        <a class="social-icon social-icon--instagram" id="socialicon">
+                                            <img src="https://i.imgur.com/cgH07pQ.png">
+                                        </a>
+
+
+                                    </div> <!--Social Icons End Here-->
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+                            <!--END OF team 2 -->
+
+
+
+                            <!--team 3 -->
+                            <div class="item">
+                                <div class="shadow-effect">
+                                    <img class="img-circle"
+                                        src="http://homedroidtech.com/assets/images/team/parveen.jpeg" alt="ankurgupta">
+                                    <h2>Parveen Kumar</h2>
+                                    <p class="title">Member, Technical Advisory Board</p>
+                                    <div id="pastexp">
+                                        <h5 id="pastexphead">ASSISTANT PROFESSOR</h5>
+                                        <p>Dept. of CSE</p>
+                                        <p style="margin-top:-5px;">National Institute of Technology (NIT) Uttarakhand
+                                        </p>
+                                    </div>
+                                    <div class="social-icons" id="teamsocial">
+                                        <a class="social-icon social-icon--facebook" id="socialicon">
+                                            <img src="https://i.imgur.com/c9JxYPS.png">
+                                        </a>
+
+                                        <a class="social-icon social-icon--twitter" id="socialicon">
+                                            <img src="https://i.imgur.com/VHB4APa.png">
+                                        </a>
+                                        <a class="social-icon social-icon--linkedin" id="socialicon">
+                                            <img src="https://i.imgur.com/egfJ4V2.png">
+                                        </a>
+
+                                        <a class="social-icon social-icon--instagram" id="socialicon">
+                                            <img src="https://i.imgur.com/cgH07pQ.png">
+                                        </a>
+
+
+                                    </div> <!--Social Icons End Here-->
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+                            <!--END OF team 3 -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="col-10 col-md-10  py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="faq-section">
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+                    <div class="accordion" id="faqAccordion">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Where is my order?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can track your order by logging into your account and visiting the "My Orders"
+                                    section. You will find real-time updates on your shipment there.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    I received a damaged product/wrong product
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Please contact our customer support team immediately with details and photos of the
+                                    damaged or wrong product. We will arrange for a return or replacement.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    I want to consult with a doctor. How can I do that?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can schedule an online consultation with a doctor through our platform. Visit
+                                    the "Consult a Doctor" section to book an appointment.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    I want to cancel/return my order
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Orders can be cancelled or returned within [X] days of purchase, provided the items
+                                    are in their original condition. Please refer to our Returns Policy for more details
+                                    or initiate a request in "My Orders".
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    I want to request for a refund
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Refunds are processed after successful return and inspection of the product. The
+                                    refund will be credited to your original payment method within [X] business days.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    My order not delivered to me in given timeline
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    While we strive for timely deliveries, unforeseen circumstances can cause delays.
+                                    Please check your tracking information for the latest updates. If there's a
+                                    significant delay, contact our support team.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    I want to raise a complaint
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We're sorry to hear you're having an issue. Please use our "Contact Us" page or call
+                                    our customer service number to formally raise a complaint. We aim to resolve all
+                                    issues promptly.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="read-more-section">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container text-center mb-4">
@@ -648,7 +971,7 @@
 
         <div class="container">
             <div class="row text-start">
-                
+
                 <div class="col-md-4 mb-3">
                     <div class="footer-title">INFORMATION</div>
                     <ul class="list-unstyled">
@@ -667,7 +990,7 @@
                     </ul>
                 </div>
 
-                
+
                 <div class="col-md-4 mb-3">
                     <div class="footer-title">CONTACT US</div>
                     <p><strong>Patanjali Ayurved Limited</strong><br>
@@ -677,7 +1000,7 @@
                     <p><i class="bi bi-envelope"></i> customercare@orderme.co.in</p>
                 </div>
 
-               
+
                 <div class="col-md-4 mb-3">
                     <div class="footer-title">Subscribe Our Newsletter</div>
                     <form class="d-flex mb-3">
@@ -721,11 +1044,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <!-- Slick JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
@@ -862,6 +1181,84 @@
                     }
                 ]
             });
+        });
+
+
+        const cardSets = {
+            set1: [
+                { title: "Ayurveda", img: "assets/images/aurveda.jpg", text: "Ayurveda is ancient wisdom." },
+                { title: "Yoga", img: "assets/images/aurveda.jpg", text: "Yoga keeps the mind and body fit." },
+                { title: "Herbs", img: "assets/images/aurveda.jpg", text: "Natural remedies for health." }
+            ],
+            set2: [
+                { title: "Technology", img: "assets/images/aurveda.jpg", text: "Latest tech trends." },
+                { title: "AI", img: "assets/images/aurveda.jpg", text: "Artificial intelligence explained." },
+                { title: "Web Dev", img: "assets/images/aurveda.jpg", text: "Modern web development." }
+            ],
+            set3: [
+                { title: "Travel", img: "assets/images/aurveda.jpg", text: "Beautiful destinations." },
+                { title: "Food", img: "assets/images/aurveda.jpg", text: "Delicious recipes to try." },
+                { title: "Culture", img: "assets/images/aurveda.jpg", text: "Traditions and heritage." }
+            ],
+            set4: [
+                { title: "Travel-4", img: "assets/images/aurveda.jpg", text: "Beautiful destinations." },
+                { title: "Food", img: "assets/images/aurveda.jpg", text: "Delicious recipes to try." },
+                { title: "Culture", img: "assets/images/aurveda.jpg", text: "Traditions and heritage." }
+            ],
+            set5: [
+                { title: "Travel-4", img: "assets/images/aurveda.jpg", text: "Beautiful destinations." },
+                { title: "Food", img: "assets/images/aurveda.jpg", text: "Delicious recipes to try." },
+                { title: "Culture", img: "assets/images/aurveda.jpg", text: "Traditions and heritage." }
+            ]
+        };
+
+        // Function to load cards
+        function showCards(setName) {
+            const container = document.getElementById("cardContainer");
+            container.innerHTML = ""; // Clear old cards
+
+            cardSets[setName].forEach(card => {
+                container.innerHTML += `
+                <div class="col-6 col-md-4" style="width: 19rem;">
+                    <div class="card" style="width: 19rem;">
+                        <img class="card-img-top" src="${card.img}" alt="${card.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${card.title}</h5>
+                            <p class="card-text">${card.text}</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            });
+        }
+
+        // Show default set on page load
+        showCards('set1');
+
+        //Team Slider
+
+
+        $('#customers-teams').owlCarousel({
+            loop: true,
+            center: true,
+            items: 3,
+            margin: 0,
+            autoplay: true,
+            dots: true,
+            autoplayTimeout: 4500,
+            checkVisibility: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1170: {
+                    items: 3
+                }
+            }
         });
 
     </script>
