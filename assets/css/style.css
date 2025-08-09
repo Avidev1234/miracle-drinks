@@ -1,16 +1,25 @@
- body {
-
-     font-family: "scale-variable", sans-serif;
-     font-variation-settings: 'wdth' 100, 'wght' 400;
-     font-size: 20px;
- }
-
-
  .main-div {
      width: 101.8%;
      align-items: center;
 
  }
+
+form button {
+    font-size: 15px;
+
+}
+
+h2,h3{
+    font-size: 20px;
+}
+
+.center img {
+    width: 38px;
+}
+
+.collapse ul>li {
+    font-size: 15px;
+}
 
  .center img {
      width: 38px;
@@ -868,4 +877,5 @@
         bottom: 120px;
         right: 20px;
         z-index: 1000;
+
       }
