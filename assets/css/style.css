@@ -829,7 +829,8 @@ h2,h3{
       .our-factory-heading {
         color: #198754; /* A green color for the heading */
         font-weight: bold;
-        margin-bottom: 1.5rem;
+/*         margin-bottom: 1.5rem; */
+       font-size:18px;
       }
       .card {
         border: none;
@@ -879,3 +880,4 @@ h2,h3{
         z-index: 1000;
 
       }
+
