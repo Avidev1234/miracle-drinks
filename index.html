@@ -38,17 +38,21 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
     <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
         p,
         span {
-            font-size: 18px;
+            font-size: 15px;
         }
 
         body {
-            font-family: 'sans-serif';
-            font-size: 18px;
+           font-family: 'Poppins';
+            font-size: 15px;
         }
 
-        
+
         h3 {
             font-size: 20px;
         }
@@ -77,6 +81,34 @@
         .fixed-box p {
             font-size: 12px;
             margin: 5px 0 0;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+        }
+
+        /* Show submenu on hover */
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        /* Optional: add arrow indicator for submenu */
+        .dropdown-submenu>a::after {
+            /* content: "▶"; */
+            float: right;
+        }
+        .navbar{
+            margin-top: 54px !important;
+        }
+        .carousel{
+            margin-top: -8px !important;
         }
     </style>
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
@@ -127,14 +159,14 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary mt-5 ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid p-3">
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
                     <li class="nav-item">
@@ -144,18 +176,29 @@
                         <a class="nav-link" href="./pages/about.html">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Research
-                        </a>
-
-                    </li>
-                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Treatments</a>
+                            aria-expanded="false">
+                            Treatments
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="./pages/kidney.html">Kidney</a></li>
-                            <li><a class="dropdown-item" href="#">Liver</a></li>
-                            <li><a class="dropdown-item" href="#">Diabetes</a></li>
+                            <!-- Liver with right side submenu -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Liver</a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Fatty Liver</a></li>
+                                    <li><a class="dropdown-item" href="#">Cirrhosis</a></li>
+                                    <li><a class="dropdown-item" href="#">Hepatitis</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Diabeties</a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Fatty Liver</a></li>
+                                    <li><a class="dropdown-item" href="#">Cirrhosis</a></li>
+                                    <li><a class="dropdown-item" href="#">Hepatitis</a></li>
+                                </ul>
+                            </li>
                             <li><a class="dropdown-item" href="#">Heart</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -164,44 +207,36 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Testimonials</a>
-                    </li>
-                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">Our products</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <button type="button" class="btn btn-outline-secondary">Book doctor appointment</button>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-success">Book doctor appointment</button>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Contact us</a>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
                     </li>
                 </ul>
-                <form class="d-flex " role="search">
+
+                <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search your keyword..."
-                        aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
-                            width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short"
-                            viewBox="0 0 16 16">
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                        </svg></button>
+                        </svg>
+                    </button>
                 </form>
-                <i class="bi bi-person"></i>
             </div>
         </div>
     </nav>
+
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -279,20 +314,13 @@
 
 
         <div class="col d-flex logos-slider slider">
-            <div class="slide p-2"><img class="img-fluid"
-                    src="./assets/images/logo1.png"></div>
-            <div class="slide p-2"><img class="img-fluid"
-                     src="./assets/images/logo2.png"></div>
-            <div class="slide p-2"><img class="img-fluid"
-                    src="./assets/images/logo3.png"></div>
-            <div class="slide p-2"><img class="img-fluid"
-                     src="./assets/images/logo4.png"></div>
-            <div class="slide p-2"><img class="img-fluid"
-                    src="./assets/images/logo5.png"></div>
-            <div class="slide p-2"><img class="img-fluid"
-                    src="./assets/images/logo6.png"></div>
-            <div class="slide p-2"><img class="img-fluid"
-                    src="./assets/images/logo7.png"></div>
+            <div class="slide p-2"><img class="img-fluid" src="./assets/images/logo1.png"></div>
+            <div class="slide p-2"><img class="img-fluid" src="./assets/images/logo2.png"></div>
+            <div class="slide p-2"><img class="img-fluid" src="./assets/images/logo3.png"></div>
+            <div class="slide p-2"><img class="img-fluid" src="./assets/images/logo4.png"></div>
+            <div class="slide p-2"><img class="img-fluid" src="./assets/images/logo5.png"></div>
+            <div class="slide p-2"><img class="img-fluid" src="./assets/images/logo6.png"></div>
+            <div class="slide p-2"><img class="img-fluid" src="./assets/images/logo7.png"></div>
 
         </div>
 
@@ -301,7 +329,7 @@
 
     <a href="https://wa.me/08060043800" target="_blank"
         class="btn btn-success rounded-circle shadow position-fixed bottom-0 end-0 m-3"
-        style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;">
+        style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; z-index: 999;">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
     <!-- <main>
@@ -427,8 +455,8 @@
         <h3><strong>Product for all concern</strong></h3>
 
         <!-- Buttons -->
-        <div class="container my-4">
-            <div class="btn-group d-flex flex-wrap gap-2 w-100 justify-content-center" role="group"
+        <div class="my-4">
+            <div class="btn-group d-flex flex-wrap gap-2 w-100 justify-content-start" role="group"
                 aria-label="Large button group">
 
                 <button type="button" class="btn btn-outline-success rounded-pill px-3 py-2 flex-grow-1 flex-md-grow-0"
@@ -465,8 +493,27 @@
     <div class="col-10 col-md-10 mx-auto mt-4">
         <h3><strong>Our expert</strong></h3>
 
-        <div class="row row-md-12 mt-4 py-4">
-            <img src="assets/images/treatment.jpeg" class="image-fluid" alt="image">
+        <div class="row align-items-center">
+            <!-- Left Side Image -->
+            <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                <img src="your-image.jpg" alt="Founder" class="about-img img-fluid shadow">
+            </div>
+
+            <!-- Right Side Text -->
+            <div class="col-lg-6 about-text">
+                <h2>Miracle Drinks – The story of Neo Ayurveda©</h2>
+                <p>
+                    Necessity is the mother of invention – Tragedy and the road to recovery
+                    for the inventor himself, his father, and his son.
+                </p>
+                <p>
+                    Miracle Drinks is the result of over 40 years of research done by Dr. S.M. Raju IAS (Retd.).
+                    Dr. Raju initially developed these medicines to help relieve himself of Rheumatoid Arthritis;
+                    he suffered from that painful disease for many years until he was able to formulate a series of
+                    concoctions that helped alleviate his pain and suffering.
+                </p>
+                <!-- <button class="btn btn-custom">Know More</button> -->
+            </div>
         </div>
     </div>
 
