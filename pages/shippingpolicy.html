@@ -28,11 +28,16 @@
             font-weight: bold;
             margin-top: 10px;
         }
+          body {
+           font-family: 'Poppins';
+            font-size: 15px;
+        }
+
     </style>
 </head>
 
 <body>
-   <div class="main-div row bg-success text-white p-2 position-fixed top-0 start-0 z-3">
+    <div class="main-div row bg-success text-white p-2 position-fixed top-0 start-0 z-3">
         <div class="col d-flex gap-2 justify-content-start">
             <div class="left-side d-flex gap-1 gap-lg-2">
                 <span role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -47,7 +52,7 @@
         <div class="col d-flex justify-content-center">
             <div class="center d-flex justify-content-center gap-4 text-dark">
                 <span role="button" class="align-items-center">
-                    <img src="https://avidev1234.github.io/miracle-drinks/assets/images/logo.png" alt="">
+                    <img src="../assets/images/logo.png" alt="">
                 </span>
             </div>
         </div>
@@ -75,14 +80,14 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary mt-5 ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mt-5">
         <div class="container-fluid p-3">
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
                     <li class="nav-item">
@@ -92,18 +97,29 @@
                         <a class="nav-link" href="./pages/about.html">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Research
-                        </a>
-
-                    </li>
-                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Treatments</a>
+                            aria-expanded="false">
+                            Treatments
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="./pages/kidney.html">Kidney</a></li>
-                            <li><a class="dropdown-item" href="#">Liver</a></li>
-                            <li><a class="dropdown-item" href="#">Diabetes</a></li>
+                            <!-- Liver with right side submenu -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Liver</a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Fatty Liver</a></li>
+                                    <li><a class="dropdown-item" href="#">Cirrhosis</a></li>
+                                    <li><a class="dropdown-item" href="#">Hepatitis</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Diabeties</a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Fatty Liver</a></li>
+                                    <li><a class="dropdown-item" href="#">Cirrhosis</a></li>
+                                    <li><a class="dropdown-item" href="#">Hepatitis</a></li>
+                                </ul>
+                            </li>
                             <li><a class="dropdown-item" href="#">Heart</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -112,41 +128,32 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Testimonials</a>
-                    </li>
-                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">Our products</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <button type="button" class="btn btn-outline-secondary">Book doctor appointment</button>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-success">Book doctor appointment</button>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Contact us</a>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
                     </li>
                 </ul>
-                <form class="d-flex " role="search">
+
+                <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search your keyword..."
-                        aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
-                            width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short"
-                            viewBox="0 0 16 16">
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                        </svg></button>
+                        </svg>
+                    </button>
                 </form>
-                <i class="bi bi-person"></i>
             </div>
         </div>
     </nav>
@@ -268,6 +275,4 @@
         crossorigin="anonymous"></script>
 </body>
 
-
 </html>
-
